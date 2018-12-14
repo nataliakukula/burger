@@ -5,8 +5,10 @@ require('dotenv').config();
 let connection;
 
 if (process.env.JAWSDB_URL) {
+    //Heroku
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
+    //Localhost
     connection = mysql.createConnection({
         host: process.env.DB_HOST,
         port: 8889,
